@@ -1,0 +1,67 @@
+<template name="first">
+    <view class="dice-box first">
+        <span class="dice-point"></span>
+    </view>
+</template>
+<template name="second">
+    <view class="dice-box second">
+        <span class="dice-point"></span>
+        <span class="dice-point self-flex-end"></span>
+    </view>
+</template>
+<template name="third">
+    <view class="dice-box third">
+        <span class="dice-point"></span>
+        <span class="dice-point self-flex-center"></span>
+        <span class="dice-point self-flex-end"></span>
+    </view>
+</template>
+<template name="fourth">
+    <view class="dice-box fourth">
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+    </view>
+</template>
+<template name="fifth">
+    <view class="dice-box fifth">
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+        <view class="column justify-center">
+            <span class="dice-point"></span>
+        </view>
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+    </view>
+</template>
+<template name="sixth">
+    <view class="dice-box sixth">
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+        <view class="column">
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+            <span class="dice-point"></span>
+        </view>
+    </view>
+</template>
+<view>
+<button data-type="small" bindtap="changeDice">骰子</button>
+</view>
+<view class="dice-body">
+        <block wx:for="{{showDiceTemplateArray}}">
+            <template is="{{item}}" />
+        </block>
+</view>

@@ -1,0 +1,65 @@
+.main-bg{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+.screen-container{
+    
+    padding-top:30rpx;
+    padding-left:5rpx;
+    padding-right:5rpx;
+}
+.screen{
+    background-color:#fff;
+    border-radius:3px;
+    text-align:right;
+    width:720rpx;
+    height:100rpx;
+    line-height:100rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+    margin-bottom:30rpx;
+    
+}
+.motto{
+  background-color: #fff;
+  padding-left:100rpx;
+  padding-top: 50px;
+  margin-top:20%;
+}
+.button{
+    display:flex;
+    flex-direction:row;
+    
+}
+.button-text{
+    width:160rpx;
+    min-height:10rpx;
+    margin:10rpx;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+    border-radius:50px;
+    text-align:center;
+    line-height:150rpx;
+    display:inline-block;
+    
+    color:#fef4e9;
+    border:solid 1px #da7c0c;
+    background:#f78d1d;
+}
+.button-text0{
+    width:320rpx;
+    min-height:10rpx;
+    margin:10rpx;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+    border-radius:50px;
+    text-align:center;
+    line-height:150rpx;
+    display:inline-block;
+    
+    color:#fef4e9;
+    border:solid 1px #da7c0c;
+    background:#f78d1d;
+}

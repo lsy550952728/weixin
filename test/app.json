@@ -1,0 +1,15 @@
+{
+  "pages": [
+    
+    "pages/welcome/welcome",
+    "pages/welcome/tz",
+    "pages/tiao/tiao",
+    "pages/game/game"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

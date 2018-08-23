@@ -1,0 +1,39 @@
+<view class="container">
+    
+    <view class="screen-container">
+        <view class="screen">
+         {{screenData}}
+        </view>
+    </view>
+    <view class="button">
+        <text class="button-text" bindtap="click" id="{{id1}}">AC</text>
+        <text class="button-text" bindtap="click" id="{{id2}}">+/-</text>
+        <text class="button-text" bindtap="click" id="{{id3}}">%</text>
+        <text class="button-text" bindtap="click" id="{{id4}}">÷</text>
+    </view>
+    <view class="button">
+        <text class="button-text" bindtap="click" id="{{id5}}">7</text>
+        <text class="button-text" bindtap="click" id="{{id6}}">8</text>
+        <text class="button-text" bindtap="click" id="{{id7}}">9</text>
+        <text class="button-text" bindtap="click" id="{{id8}}">×</text>
+    </view>
+    <view class="button">
+        <text class="button-text" bindtap="click" id="{{id9}}">4</text>
+        <text class="button-text" bindtap="click" id="{{id10}}">5</text>
+        <text class="button-text" bindtap="click" id="{{id11}}">6</text>
+        <text class="button-text" bindtap="click" id="{{id12}}">-</text>
+    </view>
+    <view class="button">
+        <text class="button-text" bindtap="click" id="{{id13}}">1</text>
+        <text class="button-text" bindtap="click" id="{{id14}}">2</text>
+        <text class="button-text" bindtap="click" id="{{id15}}">3</text>
+        <text class="button-text" bindtap="click" id="{{id16}}">+</text>
+    </view>
+    <view class="button">
+        <text class="button-text0" bindtap="click" id="{{id17}}">0</text>
+        <text class="button-text" bindtap="click" id="{{id18}}">.</text>
+        <text class="button-text" bindtap="click" id="{{id19}}">=</text>
+        
+    </view>
+    
+</view>
