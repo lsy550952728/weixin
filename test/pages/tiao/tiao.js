@@ -32,6 +32,7 @@ Page({
   click:function(event){
       console.log(event);
       var data=event.target.id
+    console.log(event.target.id);
     this.setData({
       screenData: data
     })

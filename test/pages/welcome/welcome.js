@@ -13,6 +13,10 @@ Page({
     wx.navigateTo({
       url: '../game/game',
     })
+  },
+  click:function(event){
+    var num=event.target.id
+    console.log(event.target.id)
   }
 
   })

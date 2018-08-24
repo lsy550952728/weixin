@@ -1,15 +1,26 @@
-
+var status = true;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    status: status,
     showDiceTemplateArray: [], // 用于存储显示哪些骰子模版
     showDiceArray: [0], // 用于存储随机数
     gaming: false, //判断是否在游戏中
-    timeArray: []
+    timeArray: [],
+    
+  },
+  toastShow: function (event) {
+    console.log("触发了点击事件，弹出toast")
+    status = false
+    this.setData({ status: status })　　　　//setData方法可以建立新的data属性，从而起到跟视图实时同步的效果
+  },
+  toastHide: function (event) {
+    console.log("触发bindchange，隐藏toast")
+    status = true
+    this.setData({ status: status })
   },
 
     isHidden: function () {
@@ -45,10 +56,38 @@ Page({
         gaming: false
       });
     }, 2000);
+    
+    /*
+    if (that.data.showDiceArray=="0")
+    {
+      var num = 1;
+    }
+    else if (that.data.showDiceArray == "1")
+    {
+      var num = 2;
+    }
+    else if (that.data.showDiceArray == "2") {
+      var num = 3;
+    }
+    else if (that.data.showDiceArray == "3") {
+      var num = 4;
+    }
+    else if (that.data.showDiceArray == "4") {
+      var num = 5;
+    }
+    else if (that.data.showDiceArray == "5") {
+      var num = 6;
+    }
+    console.log(num)*/
+   
+      
+    
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
+ 
   onLoad: function (options) {
 
   },
