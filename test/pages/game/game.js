@@ -1,10 +1,13 @@
 var status = true;
 Page({
-
+      
   /**
    * 页面的初始数据
    */
   data: {
+    flag:0,
+    score: 0,
+    point:0,
     status: status,
     showDiceTemplateArray: [], // 用于存储显示哪些骰子模版
     showDiceArray: [0], // 用于存储随机数
@@ -15,6 +18,57 @@ Page({
   toastShow: function (event) {
     console.log("触发了点击事件，弹出toast")
     status = false
+    var point = this.data.flag;
+    console.log("point的值");
+    console.log(point)
+    if (point == '0') {
+      console.log("判断0");
+      point=point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
+    else if (point == '1') {
+      console.log("判断1");
+      point = point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
+    else if (point == '2') {
+      console.log("判断2");
+      point = point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
+    else if (point == '3') {
+      console.log("判断3");
+      point = point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
+    else if (point == '4') {
+      console.log("判断4");
+      point = point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
+    else if (point == '5') {
+      console.log("判断5");
+      point = point-1+2;
+      var tscore = this.data.score + point;
+      this.setData({
+        score: tscore
+      })
+    }
     this.setData({ status: status })　　　　//setData方法可以建立新的data属性，从而起到跟视图实时同步的效果
   },
   toastHide: function (event) {
@@ -29,6 +83,7 @@ Page({
       this.data.showDiceArray.forEach(function (item) {
         showDiceArrayTemp.push(templateNameArray[item]);
       });
+      
       this.setData({
         showDiceTemplateArray: showDiceArrayTemp
       });
@@ -45,6 +100,9 @@ Page({
     var t1 = setInterval(function () {
       
       that.data.showDiceArray = [that.getRandomInt(0, 5)];
+      that.setData({
+        flag:that.data.showDiceArray
+      })
       that.isHidden();
     
     }, 100);
@@ -57,30 +115,6 @@ Page({
       });
     }, 2000);
     
-    /*
-    if (that.data.showDiceArray=="0")
-    {
-      var num = 1;
-    }
-    else if (that.data.showDiceArray == "1")
-    {
-      var num = 2;
-    }
-    else if (that.data.showDiceArray == "2") {
-      var num = 3;
-    }
-    else if (that.data.showDiceArray == "3") {
-      var num = 4;
-    }
-    else if (that.data.showDiceArray == "4") {
-      var num = 5;
-    }
-    else if (that.data.showDiceArray == "5") {
-      var num = 6;
-    }
-    console.log(num)*/
-   
-      
     
     
   },

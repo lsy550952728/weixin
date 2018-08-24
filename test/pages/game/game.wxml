@@ -58,23 +58,24 @@
     </view>
 </template>
 <view class="button">
-<button class="dice-button" data-type="small" bindtap="changeDice">投掷骰子</button>
-<button class="dice-button" type="default" bindtap="toastShow">显示结果</button>
-<toast hidden="{{status}}" duration="3000" bindchange="toastHide">
-
-<view wx:if="{{showDiceTemplateArray=='first'}}">投掷结果为:1</view>
-<view wx:elif="{{showDiceTemplateArray=='second'}}">投掷结果为:2</view>
-<view wx:elif="{{showDiceTemplateArray=='third'}}">投掷结果为:3</view>
-<view wx:elif="{{showDiceTemplateArray=='fourth'}}">投掷结果为:4</view>
-<view wx:elif="{{showDiceTemplateArray=='fifth'}}">投掷结果为:5</view>
-<view wx:elif="{{showDiceTemplateArray=='sixth'}}">投掷结果为:6</view>
-</toast>
-</view>
+<button class="dice-button-start" data-type="small" bindtap="changeDice">投掷骰子</button>
 <view class="dice-body">
         <block wx:for="{{showDiceTemplateArray}}">
             <template is="{{item}}" />
         </block>
 </view>
+<button class="dice-button-end" type="default" bindtap="toastShow">显示结果</button>
+<toast hidden="{{status}}" duration="3000" bindchange="toastHide">
+
+<view wx:if="{{showDiceTemplateArray=='first'}}">投掷结果为:1 总计点数为{{score}}</view>
+<view wx:elif="{{showDiceTemplateArray=='second'}}">投掷结果为:2 总计点数为{{score}}</view>
+<view wx:elif="{{showDiceTemplateArray=='third'}}">投掷结果为:3 总计点数为{{score}}</view>
+<view wx:elif="{{showDiceTemplateArray=='fourth'}}">投掷结果为:4 总计点数为{{score}}</view>
+<view wx:elif="{{showDiceTemplateArray=='fifth'}}">投掷结果为:5 总计点数为{{score}}</view>
+<view wx:elif="{{showDiceTemplateArray=='sixth'}}">投掷结果为:6 总计点数为{{score}}</view>
+</toast>
+</view>
+
 
 
 
