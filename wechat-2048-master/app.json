@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/2048/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "center",
+    "navigationBarBackgroundColor": "#F8F1E9",
+    "navigationBarTitleText": "一起玩2048",
+    "navigationBarTextStyle": "black"
+  }
+}
