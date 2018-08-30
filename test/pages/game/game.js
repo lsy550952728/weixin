@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag:0,
-    score: 0,
-    point:0,
+    only:0,   //避免最终结果重复累计
+    flag:0,  //用于判定当前骰子的点数
+    score: 0,  //用于传到前端中的最终得分
+    point:0,  //点数
     status: status,
     showDiceTemplateArray: [], // 用于存储显示哪些骰子模版
     showDiceArray: [0], // 用于存储随机数
@@ -18,13 +19,19 @@ Page({
   toastShow: function (event) {
     console.log("触发了点击事件，弹出toast")
     status = false
+    var tonly=this.data.only;
+    console.log(tonly);
+    if(tonly=='1'){  //当骰子被投掷时，only才等于1，则记下此次的值，并将only+1，当only为其他数值时，直接显示结果，避免结果累加
     var point = this.data.flag;
     console.log("point的值");
     console.log(point)
     if (point == '0') {
       console.log("判断0");
-      point=point-1+2;
+      point=point-1+2; // 先-1， 可进行正常的加减运算
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
@@ -32,7 +39,10 @@ Page({
     else if (point == '1') {
       console.log("判断1");
       point = point-1+2;
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
@@ -40,7 +50,10 @@ Page({
     else if (point == '2') {
       console.log("判断2");
       point = point-1+2;
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
@@ -48,7 +61,10 @@ Page({
     else if (point == '3') {
       console.log("判断3");
       point = point-1+2;
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
@@ -56,7 +72,10 @@ Page({
     else if (point == '4') {
       console.log("判断4");
       point = point-1+2;
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
@@ -64,11 +83,22 @@ Page({
     else if (point == '5') {
       console.log("判断5");
       point = point-1+2;
+      console.log(point);
       var tscore = this.data.score + point;
+      console.log("tscore的值");
+      console.log(tscore);
       this.setData({
         score: tscore
       })
     }
+    tonly=tonly+1;
+    this.setData({only:tonly++})
+  }
+    else {
+      var tscore=this.data.score;
+      this.setData({
+        score: tscore
+      })}
     this.setData({ status: status })　　　　//setData方法可以建立新的data属性，从而起到跟视图实时同步的效果
   },
   toastHide: function (event) {
@@ -101,7 +131,8 @@ Page({
       
       that.data.showDiceArray = [that.getRandomInt(0, 5)];
       that.setData({
-        flag:that.data.showDiceArray
+        flag:that.data.showDiceArray,
+        only:1
       })
       that.isHidden();
     

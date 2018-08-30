@@ -1,5 +1,3 @@
-<view class="container">
-    <image class="myphoto"></image>
-    <text class="motto">123456</text>
-    
-</view>
+<view class="clouds">
+      <button animation="{{animationCloudData}}"  class="yun1" ></button>
+    </view>

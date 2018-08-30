@@ -1,1 +1,44 @@
-/* pages/welcome/tz.wxss */
+.clouds{
+  margin-top:320rpx; 
+}
+.yun1{
+  width:320rpx;
+  height: 120rpx;
+  background: red;
+  color: red;
+}
+
+ 
+/*
+    var that = this;
+    // 页面渲染完成
+    //实例化一个动画
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
+    animation.scale(2, 2).rotate(45).step().scale(1,1).step();
+    //导出动画
+    this.setData({
+      animationData: animation.export()
+    })
+    var i = 0;
+    // 顺序执行，当已经执行完上面的代码就会开启定时器
+    /*setTimeout(function () {
+      that.setData({
+        animationData: animation.export()
+      });
+      i++;
+      console.log(i);
+    }, 1000);*/
+ 
+    /*setInterval(function () {
+      //循环执行代码 
+        that.setData({
+          animationData: animation.export()
+        });
+      i++;
+      console.log(i); 
+    }, 1000) //循环时间 这里是1秒   
+  }*/

@@ -6,8 +6,8 @@
 }
 .dice-point {
     display: block;
-    width: 20rpx;
-    height: 20rpx;
+    width: 27rpx;
+    height: 27rpx;
     border-radius: 50%;
     margin: 8rpx;
     margin-top:0%;
@@ -18,8 +18,8 @@
     margin: 26rpx;
     padding: 8rpx;
     background-color: #e7e7e7;
-    width: 100rpx;
-    height: 100rpx;
+    width: 130rpx;
+    height: 130rpx;
     box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
     border-radius: 10%;
 }

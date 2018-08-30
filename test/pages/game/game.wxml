@@ -75,6 +75,8 @@
 <view wx:elif="{{showDiceTemplateArray=='sixth'}}">投掷结果为:6 总计点数为{{score}}</view>
 </toast>
 </view>
+<view class="GameMap">
+</view>
 
 
 
